@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toing Bot — Device Spoof & Live Sync</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Toing Bot Control Panel</h1>
+      <div class="meta">Active Device ID: <span id="active-device-id">None</span> | Sync: <span id="sync-status">Idle</span></div>
+    </div>
+
+    <div class="card">
+      <h2>1. Device Spoof & OTP Login</h2>
+      <div class="row">
+        <input id="phone-input" type="tel" maxlength="10" placeholder="10-digit mobile number" />
+        <button id="btn-spoof-otp" class="secondary">Spoof New Device + Send OTP</button>
+        <button id="btn-send-otp">Send OTP</button>
+      </div>
+      <div class="row">
+        <input id="otp-input" type="text" maxlength="6" placeholder="Enter OTP" />
+        <button id="btn-verify-otp">Verify OTP</button>
+      </div>
+      <div id="auth-log" class="meta">Ready.</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2>2. Live Cart Sync</h2>
+        <div id="live-cart-box">No active cart data.</div>
+        <div class="row" style="margin-top: 12px;">
+          <button id="btn-manual-cart" class="secondary">Force Cart Sync</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>3. Live Payment Sync</h2>
+        <div id="live-payment-box">No active payment data.</div>
+        <div class="row" style="margin-top: 12px;">
+          <button id="btn-manual-payment" class="secondary">Force Payment Sync</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
